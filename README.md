@@ -1,4 +1,4 @@
 awsbuilder
-==========
+===========
 
-Tools for creating AWS items via the command line
+Tools to create and manage AWS resources
