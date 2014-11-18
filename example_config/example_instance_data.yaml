@@ -7,7 +7,7 @@ project:
           key: default
           instance_type: t2.small
           ami: ami-9656a1e1
-          userdata: /Users/stuart/git/aws-builder/example_config/example_userdata.sh
+          userdata: /srv/git/aws-builder/example_config/example_userdata.sh
           tags:
             Env: development
             App: courtfinder
