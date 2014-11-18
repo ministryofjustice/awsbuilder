@@ -11,9 +11,9 @@ Tools to create and manage AWS resources
 
 This module must to be run in conjunction with the following configuration files:
 
-* AWS Account configuration ([example:](example_config/config.yml)
-* Environment definition ([example:](example_config/example_instance_data.yaml)
-* EC2 Bootstrap (userdata) script ([example:](example_config/example_userdata.sh)
+* AWS Account configuration [example](example_config/config.yml)
+* Environment definition [example](example_config/example_instance_data.yaml)
+* EC2 Bootstrap (userdata) script [example](example_config/example_userdata.sh)
 
 ## Example Usage
 
