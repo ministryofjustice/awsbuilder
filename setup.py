@@ -15,7 +15,7 @@ setup(
     packages=["awsbuilder"],
 
     # Executables
-    scripts=['awsbuilder/bin/awsbuilder'],
+    scripts=['awsbuilder/awsbuilder'],
 
     # Include additional files into the package
     include_package_data=True,
