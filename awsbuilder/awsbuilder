@@ -56,7 +56,7 @@ class EC2:
                 print i
                 userdata = None
                 try:
-                    userdata = conf[i]['userdata']
+                    userdata = open(conf[i]['userdata']).read()
                 except KeyError:
                     pass
                 reservation = self.conn_ec2.run_instances(conf[i]['ami'],
