@@ -1,9 +1,50 @@
-account:
-  dev:
-    aws_access_key_id: '****************'
-    aws_secret_access_key: '*************************************'
-    region: 'eu-west-1'
-  prod:
-    aws_access_key_id: '****************'
-    aws_secret_access_key: '*************************************'
-    region: 'eu-west-1'
+dev:
+  aws:
+    access: AAA
+    secret: BBB
+    region: eu-west-1
+  github:
+    salt: git@github.com:ministryofjustice/somerepo.git
+  ec2:
+    docker:
+      key_name: default
+      instance_type: m3.medium
+      userdata: /userdata/docker.cloudinit
+      ami: ami-00000000
+      tags:
+        Env: dev
+        Name: docker
+        App: MoJ
+      security_groups:
+        - SecurityGroup1
+        - SecurityGroup2
+  rds:
+    id: MoJ-dev
+    db_name: moj-db
+    allocated_storage: 20
+    instance_class: db.t2.small
+    master_username: moj
+    master_password: 123456
+    port: 5432
+    engine: postgres
+    engine_version: 9.3.5
+    auto_minor_version_upgrade: False
+    multi_az: False
+    backup_retention_period: 1
+  elb:
+    name: moj-dev
+    listeners:
+      http:
+        - 80
+        - 80
+        - HTTP
+    security_groups:
+      sg-12345678: SecurityGroup1
+  elasticache:
+    cache_cluster_id: moj-dev
+    num_cache_nodes: 1
+    cache_node_type: cache.t2.micro
+    engine: memcached
+    engine_version: 1.4.14
+    security_group_ids:
+      - sg-12345678
