@@ -1,4 +1,2 @@
 include CHANGES.txt
 include README.txt
-recursive-include awsbuilder/bin *
-recursive-include awsbuilder/libs *

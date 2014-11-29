@@ -5,7 +5,7 @@ setup(
     name="awsbuilder",
 
     # Version number (initial):
-    version="0.0.1",
+    version="0.0.3",
 
     # Application author details:
     author="Stuart Munro",
@@ -16,9 +16,6 @@ setup(
 
     # Executables
     scripts=['awsbuilder/awsbuilder'],
-
-    # Include additional files into the package
-    include_package_data=True,
 
     # Details
     url="https://github.com/ministryofjustice/awsbuilder",
@@ -41,8 +38,5 @@ setup(
 
     classifiers = ["Intended Audience :: Developers",
                    "License :: OSI Approved :: MIT License",
-                   "Topic :: Internet",
-                   "Programming Language :: Python :: 2",
-                   "Programming Language :: Python :: 2.6",
-                   "Programming Language :: Python :: 2.7"],
+                   "Topic :: Internet"],
 )
