@@ -2,6 +2,7 @@
 
 import sys
 import yaml
+import time
 from optparse import OptionParser
 import boto.ec2
 import boto.elasticache

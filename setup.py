@@ -5,7 +5,7 @@ setup(
     name="awsbuilder",
 
     # Version number (initial):
-    version="0.0.3",
+    version="0.0.4",
 
     # Application author details:
     author="Stuart Munro",
