@@ -18,28 +18,27 @@ This module must to be run in conjunction with the following configuration files
 ## Example Usage
 
 ```
-awsbuilder -m create -c ~/config.yml -a dev -d ~/instance_data.yml -s search -p courtfinder -e development
+awsbuilder -a <aws_access_key> -s <aws_secret_key> -m create -c config.yml -e dev -i ec2
 ```
 
 ## Help
 
 ```
 bash$ awsbuilder --help
-  Usage: awsbuilder [options]
+Usage: awsbuilder [options]
 
-  Options:
-    -h, --help            show this help message and exit
-    -m MODE, --mode=MODE  Mode, server options: [create, delete]
-    -c CONFIG, --config=CONFIG
-                          Account config path (AWS)
-    -d DATA, --data=DATA  Server instance data path
-    -s SERVER, --server=SERVER
-                          Create a new server
-    -a ACCOUNT, --account=ACCOUNT
-                          Which AWS account to use from the config file
-    -p PROJECT, --project=PROJECT
-                          Which project from the instance data file
-    -e ENV, --env=ENV     Which environment from the instance data file
+Options:
+  -h, --help            show this help message and exit
+  -a AWS_ACCESS, --access=AWS_ACCESS
+                        AWS Access key
+  -s AWS_SECRET, --secret=AWS_SECRET
+                        AWS Secret key
+  -m MODE, --mode=MODE  Mode [create or delete]
+  -e ENV, --env=ENV     Set the environment
+  -i ITEM, --item=ITEM  Set the AWS service item you want create/delete
+                        [ec2,elb,elasticache,rds]
+  -c CONFIG, --config=CONFIG
+                        Override the default config.yml file
 ```
 
 
